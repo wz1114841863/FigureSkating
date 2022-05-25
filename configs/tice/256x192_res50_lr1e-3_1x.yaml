@@ -1,0 +1,65 @@
+DATASET:
+  TRAIN:
+    TYPE: 'Tice'
+    ROOT: '/home/dell/first/Dataset/Tice/'
+    IMG_PREFIX: 'train'
+    ANN: 'annotations/train.json'
+    AUG:
+      FLIP: true
+      ROT_FACTOR: 40
+      SCALE_FACTOR: 0.3
+      NUM_JOINTS_HALF_BODY: 8
+      PROB_HALF_BODY: -1
+  VAL:
+    TYPE: 'Tice'
+    ROOT: '/home/dell/first/Dataset/Tice/'
+    IMG_PREFIX: 'val'
+    ANN: 'annotations/val.json'
+  TEST:
+    TYPE: 'Tice'
+    ROOT: '/home/dell/first/Dataset/Tice/'
+    IMG_PREFIX: 'test'
+    DET_FILE: './exp/json/test_det_yolo.json'
+    ANN: 'annotations/test.json'
+DATA_PRESET:
+  TYPE: 'simple'
+  SIGMA: 2
+  NUM_JOINTS: 17
+  IMAGE_SIZE:
+    - 256
+    - 192
+  HEATMAP_SIZE:
+    - 64
+    - 48
+MODEL:
+  TYPE: 'FastPose'
+  PRETRAINED: '/home/dell/first/AlphaPose/pretrained_models/fast_res50_256x192.pth'
+  TRY_LOAD: ''
+  NUM_DECONV_FILTERS:
+    - 256
+    - 256
+    - 256
+  NUM_LAYERS: 50
+LOSS:
+  TYPE: 'MSELoss'
+DETECTOR:
+  NAME: 'yolo'
+  CONFIG: 'detector/yolo/cfg/yolov3-spp.cfg'
+  WEIGHTS: 'detector/yolo/data/yolov3-spp.weights'
+  NMS_THRES: 0.6
+  CONFIDENCE: 0.05
+TRAIN:
+  WORLD_SIZE: 4
+  BATCH_SIZE: 64
+  BEGIN_EPOCH: 200
+  END_EPOCH: 300
+  OPTIMIZER: 'rmsprop'
+  LR: 0.001
+  LR_FACTOR: 0.1
+  LR_STEP:
+    - 25
+    - 35
+  DPG_MILESTONE: 201
+  DPG_STEP:
+    - 250
+    - 275

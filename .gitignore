@@ -1,0 +1,7 @@
+# git ignore file
+*.mp4
+*.jpg
+*.png
+*.pth
+
+detector/yolo/data

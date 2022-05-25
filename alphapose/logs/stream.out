@@ -1,0 +1,14 @@
+INFO:     Will watch for changes in these directories: ['/home/dell/wz/AlphaPose']
+INFO:     Uvicorn running on http://10.112.6.220:4012 (Press CTRL+C to quit)
+INFO:     Started reloader process [269925] using watchgod
+INFO:     Started server process [269946]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     10.38.19.142:58715 - "GET /video_feed_main_result HTTP/1.1" 200 OK
+INFO:     10.38.19.142:58716 - "GET /video_feed_3d HTTP/1.1" 200 OK
+INFO:     10.38.19.142:58717 - "GET /video_feed_heatmap HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [269946]
+INFO:     Stopping reloader process [269925]

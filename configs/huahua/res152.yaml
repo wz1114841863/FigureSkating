@@ -1,0 +1,73 @@
+DATASET:
+  TRAIN:
+    TYPE: 'Huahua'
+    ROOT: '/home/dell/first/Dataset/Huahua/'
+    IMG_PREFIX: 'train'
+    ANN: 'annotations/train.json'
+    AUG:
+      FLIP: true
+      ROT_FACTOR: 40
+      SCALE_FACTOR: 0.3
+      NUM_JOINTS_HALF_BODY: 8
+      PROB_HALF_BODY: -1
+  VAL:
+    TYPE: 'Huahua'
+    ROOT: '/home/dell/first/Dataset/Huahua/'
+    IMG_PREFIX: 'val'
+    ANN: 'annotations/val.json'
+  TEST:
+    TYPE: 'Huahua'
+    ROOT: '/home/dell/first/Dataset/Huahua/'
+    IMG_PREFIX: 'test'
+    DET_FILE: './exp/json/test_det_yolo.json'
+    ANN: 'annotations/test.json'
+DATA_PRESET:
+  TYPE: 'simple'
+  SIGMA: 2
+  NUM_JOINTS: 17
+  IMAGE_SIZE:
+    - 256
+    - 192
+  HEATMAP_SIZE:
+    - 64
+    - 48
+MODEL:
+  TYPE: 'FastPose_DUC'
+  BACKBONE: 'se-resnet'
+  PRETRAINED: '/home/dell/first/exp/100-pretrain-huahua/final_DPG.pth'
+  TRY_LOAD: ''
+  NUM_DECONV_FILTERS:
+    - 256
+    - 256
+    - 256
+  NUM_LAYERS: 152
+  FINAL_CONV_KERNEL: 1
+  STAGE1:
+    NUM_CONV: 4
+  STAGE2:
+    NUM_CONV: 2
+  STAGE3:
+    NUM_CONV: 1
+LOSS:
+  TYPE: 'MSELoss'
+DETECTOR:
+  NAME: 'yolo'
+  CONFIG: '/home/dell/first/AlphaPose/detector/yolo/cfg/yolov3-spp.cfg'
+  WEIGHTS: '/home/dell/first/AlphaPose/detector/yolo/data/yolov3-spp.weights'
+  NMS_THRES: 0.6
+  CONFIDENCE: 0.05
+TRAIN:
+  WORLD_SIZE: 4
+  BATCH_SIZE: 32
+  BEGIN_EPOCH: 200
+  END_EPOCH: 300
+  OPTIMIZER: 'adam'
+  LR: 0.01
+  LR_FACTOR: 0.1
+  LR_STEP:
+    - 45
+    - 75
+  DPG_MILESTONE: 201
+  DPG_STEP:
+  - 250
+  - 275

@@ -1,0 +1,32 @@
+INFO:     Will watch for changes in these directories: ['/home/dell/wz/AlphaPose']
+INFO:     Uvicorn running on http://10.112.6.220:4011 (Press CTRL+C to quit)
+INFO:     Started reloader process [269923] using watchgod
+INFO:     Started server process [269929]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     ('10.38.19.142', 58714) - "WebSocket /ws/action_classification/result_stream" [accepted]
+INFO:     connection open
+INFO:     ('10.38.19.142', 58718) - "WebSocket /ws/action_confidence/result_stream" [accepted]
+INFO:     connection open
+INFO:     ('10.38.19.142', 58719) - "WebSocket /ws/pose/result_stream" [accepted]
+INFO:     connection open
+INFO:     connection closed
+INFO:     connection closed
+INFO:     connection closed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [269929]
+0
+2.3993352890014648
+2.398852729797363
+2.398775005340576
+2.3990713596343993
+2.3988343715667724
+action_queue  is empty.
+confidence_queue  is empty.
+pose_queue  is empty.
+pose_queue  is empty.
+action_queue  is empty.
+confidence_queue  is empty.
+INFO:     Stopping reloader process [269923]

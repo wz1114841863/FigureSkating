@@ -1,0 +1,13 @@
+# ninja log v5
+0	3824	1650521170064791373	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/detector/nms/src/soft_nms_cpu.o	9b8adb3505698535
+0	21619	1650521192118141741	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/detector/nms/src/nms_cpu.o	98bd2ac5e0905398
+1	16550	1650521209127183664	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/detector/nms/src/nms_kernel.o	2047048914a6fb5f
+4	22689	1650522698059044662	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/detector/nms/src/nms_cpu.o	98bd2ac5e0905398
+0	16439	1650522714904086831	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/detector/nms/src/nms_kernel.o	2047048914a6fb5f
+0	20444	1650522718912334815	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/detector/nms/src/nms_cuda.o	65f53d248438b8fd
+1	15769	1650522735113337161	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/alphapose/utils/roi_align/src/roi_align_kernel.o	aa98fc71720e7e76
+1	20179	1650522739525610148	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/alphapose/utils/roi_align/src/roi_align_cuda.o	e11d05f77f95c43c
+1	15991	1650522755954626621	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/alphapose/models/layers/dcn/src/deform_conv_cuda_kernel.o	cb3608ef10fcbaa4
+0	23877	1650522763835114197	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/alphapose/models/layers/dcn/src/deform_conv_cuda.o	2b91e80bf7ff4c9e
+0	15569	1650522779832103964	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/alphapose/models/layers/dcn/src/deform_pool_cuda_kernel.o	bb6f1e95817fa6cd
+0	20385	1650522784648403364	/home/dell/wz/AlphaPose/build/temp.linux-x86_64-cpython-37/alphapose/models/layers/dcn/src/deform_pool_cuda.o	fdcd677a81dc9e03

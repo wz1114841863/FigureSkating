@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "demo/to3d.py", line 15, in <module>
+    from mmpose.core import Smoother
+ImportError: cannot import name 'Smoother' from 'mmpose.core' (/home/dell/xcy/mm_pose/mmpose/mmpose/core/__init__.py)
+test.sh: 9: test.sh: data_2d_json/test_data.json: Permission denied
+test.sh: 10: test.sh: --out-video-root: not found
